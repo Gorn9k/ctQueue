@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test view</title>
+</head>
+<body>
+    <h1>Entrant reg:</h1>
+    <form method="POST" action="/entrant/registration">
+        <input type="email" name='email' placeholder='email' /> <br />
+        <input type="text" name='firstname' placeholder='firstname' /><br />
+        <input type="text" name='patronymic' placeholder='patronymic' /><br />
+        <input type="text" name='surname' placeholder='surname' /><br />
+        <input type="number" name='phone' placeholder='phone' /><br />
+        <input type="number" name='reservation'
+            placeholder='reservation' /><br />
+        <button type="submit">Registration</button>
+    </form>
+
+    <h1>Entrant reg (from operator):</h1>
+    <form method="POST" action="/operator/entrant/reserveRegistration">
+        <input type="email" name='email' placeholder='email' /> <br />
+        <input type="text" name='firstname' placeholder='firstname' /><br />
+        <input type="text" name='patronymic' placeholder='patronymic' /><br />
+        <input type="text" name='surname' placeholder='surname' /><br />
+        <input type="number" name='phone' placeholder='phone' /><br />
+        <input type="number" name='reservation'
+            placeholder='reservation' /><br />
+        <button type="submit">Registration</button>
+    </form>
+
+    <h1>New operator reg:</h1>
+    <form method="POST" action="/registration">
+        <input type="text" name='username' placeholder='username' /><br />
+        <input type="text" name='firstname' placeholder='firstname' /><br />
+        <input type="text" name='patronymic' placeholder='patronymic' /><br />
+        <input type="text" name='surname' placeholder='surname' /><br />
+        <input type="password" name='password' placeholder='password' /><br />
+        <input type="password" name='rPassword' placeholder='rPassword' /><br />
+        <input type="password" name='verificationCode'
+            placeholder='verificationCode' /><br />
+        <button type="submit">Registration</button>
+    </form>
+
+    <h1>Entrant update (operator):</h1>
+    <form method="POST" action="/operator/entrant/update">
+        <input type="number" name='id' placeholder='ID' /> <br /> <input
+            type="email" name='email' placeholder='email' /> <br /> <input
+            type="text" name='firstname' placeholder='firstname' /><br />
+        <input type="text" name='patronymic' placeholder='patronymic' /><br />
+        <input type="text" name='surname' placeholder='surname' /><br />
+        <input type="number" name='phone' placeholder='phone' /><br />
+        <input type="number" name='reservation'
+            placeholder='reservationDate' /><br /> <input
+            type="number" name='type'
+            placeholder='reservationType' /><br />
+        <button type="submit">Update</button>
+    </form>
+
+    <h1>Entrant delete (operator):</h1>
+    <form method="GET" action="/operator/entrant/delete">
+        <input type="number" name='id' placeholder='id' /><br />
+        <button type="submit">Delete</button>
+    </form>
+
+    <h1>Generate timetable (admin):</h1>
+    <form method="POST" action="/reservation/generate">
+        <input type="text" name='startDate' placeholder='startDate' /><br />
+        <input type="text" name='endDate' placeholder='endDate' /><br />
+        <input type="text" name='startTime' placeholder='startTime' /><br />
+        <input type="text" name='endTime' placeholder='endTime' /><br />
+        <input type="number" name='interval' placeholder='interval' /><br />
+        <button type="submit">Generate</button>
+    </form>
+
+    <h1>Login:</h1>
+    <form method="POST" action="/securityCheck">
+        <input type="text" name='username' placeholder='username' value="admin"/><br />
+        <input type="password" name='password' placeholder='password' value="Admin1"/><br />
+        <button type="submit">Log in</button>
+    </form>
+    
+     <h1>TIMETABLE:</h1>
+    <form method="GET" action="/entrant/getTimetable">       
+        <button type="submit">GET</button>
+    </form>
+
+    <h1>Logout:</h1>
+    <form method="GET" action="/logout">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
